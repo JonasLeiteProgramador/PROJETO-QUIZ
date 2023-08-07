@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@font-face {
+  font-family: "Games";
+  src: url("../assets/PixelGameFont.ttf") format("truetype"); /* ou "opentype" para .otf */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -5,21 +13,34 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .titulo{
+    
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 4px;
   }
   
   .quiz-container {
     max-width: 750px;
     margin: 50px auto;
     padding: 20px;
-    background-color: rgb(0, 0, 0);
+    background-color: #02000dae;
     border: 1px solid #ccc;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
   }
   
   h1, h2, p {
     text-align: center;
-    color: green;
+    color: #fff;
   }
   
   .pergunta, .resultado {
@@ -36,6 +57,14 @@ body {
     height: auto;
     align-items: center;  
   }
+
+  .historia{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    justify-content: center;
+    align-items: center;
+  }
   
   .opcoes {
     display: flex;
@@ -48,7 +77,7 @@ body {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: green;
+    background-color: #380e73;
     color: white;
     border: none;
     cursor: pointer;
@@ -58,7 +87,7 @@ body {
     text-align: center;
     margin-top: 20px;
     font-weight: bold;
-    color: green;
+    color: #ef2ef2;
   }
   
   .escondido {
@@ -67,15 +96,19 @@ body {
   
   .começo {
     border: 1px solid white;
-    background-color: green;
+    background-color: #ef2ef2;
     border-radius: 4.5px;
     color: black;
     font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
     transition: 0.3s ease all;
+    width: 80%;
+    height: 35px;
   }
   
   .começo:hover {
-    transform: scale(1.2);
-    background-color: white;
+    transform: scale(1.1);
+    background-color: #380e73;
+    color: #fff;
   }
   
