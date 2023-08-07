@@ -9,13 +9,13 @@ const fases = [
       pergunta: 'Qual é o animal terrestre mais rápido?',
       opcoes: ['Guepardo', 'Leão', 'Elefante', 'Rinoceronte'],
       respostaCorreta: 'a',
-      imagem: 'guepardo.jpg'
+      imagem: 'assets/FASE 2 (1).png'
     },
     {
       pergunta: 'Qual é o país com a maior população do mundo?',
       opcoes: ['Índia', 'China', 'Estados Unidos', 'Rússia'],
       respostaCorreta: 'b',
-      imagem: 'china.jpg'
+      imagem: 'assets/FASE 3.png'
     }
   ];
   
