@@ -41,16 +41,20 @@ function mostrarFase() {
   const fase = fases[faseAtual];
   elementoPergunta.innerHTML = '';
 
-  const tituloPergunta = document.createElement('h2');
-  tituloPergunta.textContent = `Fase ${faseAtual + 1}:`;
-
-  const textoPergunta = document.createElement('p');
-  textoPergunta.textContent = fase.pergunta;
-
   const imagemPergunta = document.createElement('img');
   imagemPergunta.className = 'imagem-pergunta';
   imagemPergunta.src = fase.imagem;
   imagemPergunta.alt = `Fase ${faseAtual + 1}`;
+
+  elementoPergunta.appendChild(imagemPergunta);
+
+  const tituloPergunta = document.createElement('h2');
+  tituloPergunta.textContent = `Fase ${faseAtual + 1}:`;
+  elementoPergunta.appendChild(tituloPergunta);
+
+  const textoPergunta = document.createElement('p');
+  textoPergunta.textContent = fase.pergunta;
+  elementoPergunta.appendChild(textoPergunta);
 
   const containerOpcoes = document.createElement('div');
   containerOpcoes.className = 'opcoes';
@@ -64,9 +68,9 @@ function mostrarFase() {
     containerOpcoes.appendChild(botao);
   });
 
+  elementoPergunta.appendChild(imagemPergunta);
   elementoPergunta.appendChild(tituloPergunta);
   elementoPergunta.appendChild(textoPergunta);
-  elementoPergunta.appendChild(imagemPergunta);
   elementoPergunta.appendChild(containerOpcoes);
 }
 
