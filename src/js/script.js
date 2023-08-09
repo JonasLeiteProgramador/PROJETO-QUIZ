@@ -1,20 +1,20 @@
 const fases = [
   {
-    pergunta: 'O Mundo Digital Misterioso - Pergunta: Qual tag HTML é usada para criar um link?',
+    pergunta: 'Qual tag HTML é usada para criar um link no HTML?',
     opcoes: ['<link>', '<a>', '<h1>', '<img>'],
     respostaCorreta: 'b',
-    imagem: '../assets/FASE 1.png'
+    imagem: 'assets/fase1.gif'
   },
   {
-    pergunta: 'Qual é o animal terrestre mais rápido?',
-    opcoes: ['Guepardo', 'Leão', 'Elefante', 'Rinoceronte'],
+    pergunta: 'Qual propriedade devemos utilizar para alterar a cor de um texto no CSS?',
+    opcoes: ['color', 'font:color', 'text:color', 'text-font:color'],
     respostaCorreta: 'a',
-    imagem: 'assets/FASE 2 (1).png'
+    imagem: 'assets/fase2.gif'
   },
   {
-    pergunta: 'Qual é o país com a maior população do mundo?',
-    opcoes: ['Índia', 'China', 'Estados Unidos', 'Rússia'],
-    respostaCorreta: 'b',
+    pergunta: 'Como se declara uma função em JavaScript?',
+    opcoes: ['function{}', 'var()', 'set[]', 'fuction()'],
+    respostaCorreta: 'd',
     imagem: 'assets/FASE 3.png'
   }
 ];
