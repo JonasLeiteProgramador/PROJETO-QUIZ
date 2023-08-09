@@ -9,11 +9,12 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("../assets/Fundo.jpg"); 
+    background-image: url("../assets/Fundo.gif"); 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Courier New', Courier, monospace;
+
   }
 
   .titulo{
@@ -111,4 +112,11 @@ body {
     background-color: #380e73;
     color: #fff;
   }
-  
+  .imagem-final{
+    width: 500px;
+    height: 500px;
+    background-image: url('/assets/PASSOU.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 100px;
+  }
