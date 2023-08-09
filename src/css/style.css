@@ -115,8 +115,10 @@ body {
   .imagem-final{
     width: 500px;
     height: 500px;
-    background-image: url('/assets/PASSOU.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-left: 100px;
+    margin-left: 20px;
+  }
+  .imagem-game-over{
+    width: 500px;
+    height: 500px;
+    margin-left: 20px;
   }

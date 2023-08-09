@@ -20,16 +20,24 @@ const fases = [
 ];
 
 let faseAtual = 0;
+let quizAtivo = false;
+let mostrandoTelaDeDerrota = false;
 const elementoResultado = document.getElementById('resultado');
 const elementoPergunta = document.getElementById('container-pergunta');
+const elementoHistoria = document.querySelector('.historia');
 
 function iniciarQuiz() {
-  document.querySelector('.historia').style.display = 'none';
+  elementoHistoria.style.display = 'none';
   elementoPergunta.style.display = 'block';
+  elementoResultado.innerHTML = '';
+  mostrandoTelaDeDerrota = false;
+  quizAtivo = true;
   mostrarFase();
 }
 
 function mostrarFase() {
+  if (!quizAtivo) return;
+
   const fase = fases[faseAtual];
   elementoPergunta.innerHTML = '';
 
@@ -63,7 +71,10 @@ function mostrarFase() {
 }
 
 function verificarResposta(evento) {
+  if (!quizAtivo) return;
+
   const opcaoSelecionada = evento.target;
+
   if (opcaoSelecionada.value === fases[faseAtual].respostaCorreta) {
     elementoResultado.textContent = `Resposta correta! Avançando para a próxima fase...`;
     faseAtual++;
@@ -73,17 +84,42 @@ function verificarResposta(evento) {
       }, 2000);
     } else {
       elementoResultado.textContent = `Parabéns! Você completou todas as fases do quiz e ajudou Joshua a escapar do mundo virtual!.`;
-      const imagemFinal = document.createElement('div');
+      const imagemFinal = new Image();
+      imagemFinal.src = 'assets/Fundo.gif';
       imagemFinal.className = 'imagem-final';
       elementoResultado.appendChild(imagemFinal);
-      
-      // Esconde a parte das perguntas e fases do quiz
       elementoPergunta.style.display = 'none';
+      quizAtivo = true;
+      setTimeout(() => {
+        voltarParaTelaInicial();
+      }, 5000);
     }
   } else {
-    elementoResultado.textContent = `Resposta incorreta. Você perdeu. Reiniciando o quiz...`;
+    elementoResultado.innerHTML = 'Você perdeu! Tente novamente, não deixe Joshua agora!';
+    const imagemGameOver = new Image();
+    imagemGameOver.src = 'assets/Fundo.gif';
+    imagemGameOver.className = 'imagem-game-over';
+    elementoResultado.appendChild(imagemGameOver);
+    elementoPergunta.style.display = 'none';
+    mostrandoTelaDeDerrota = true;
     setTimeout(() => {
-      reiniciarQuiz();
-    }, 2000);
+      voltarParaTelaInicial();
+    }, 5000);
   }
 }
+
+function voltarParaTelaInicial() {
+  if (mostrandoTelaDeDerrota) {
+    elementoResultado.innerHTML = '';
+    mostrandoTelaDeDerrota = false;
+  }else if(quizAtivo){
+    elementoResultado.innerHTML = '';
+    quizAtivo = false
+  }
+  faseAtual = 0;
+  elementoHistoria.style.display = 'flex';
+  elementoPergunta.style.display = 'none';
+  quizAtivo = false;
+}
+
+voltarParaTelaInicial()
