@@ -27,6 +27,7 @@ const elementoPergunta = document.getElementById('container-pergunta');
 const elementoHistoria = document.querySelector('.historia');
 const elementoContainerQuiz = document.querySelector('.quiz-container');
 const elementoLogo = document.querySelector('.logo');
+const elementoTitulo = document.querySelector('.titulo')
 
 function iniciarQuiz() {
   elementoHistoria.style.display = 'none';
@@ -36,6 +37,7 @@ function iniciarQuiz() {
   quizAtivo = true;
   elementoContainerQuiz.classList.add('quiz-iniciado');
   elementoLogo.classList.remove('no-quiz');
+  elementoTitulo.classList.add('escondido');
   mostrarFase();
 }
 
@@ -125,9 +127,12 @@ function voltarParaTelaInicial() {
     quizAtivo = false
   }
   faseAtual = 0;
-  elementoPergunta.style.display = 'flex';
+  elementoHistoria.style.display = 'flex';
   elementoPergunta.style.display = 'none';
   quizAtivo = false;
+  elementoContainerQuiz.classList.remove('quiz-iniciado'); 
+  elementoLogo.classList.add('no-quiz');
+  elementoTitulo.classList.remove('escondido');
 }
 
 voltarParaTelaInicial()
