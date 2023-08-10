@@ -15,7 +15,7 @@ const fases = [
     pergunta: 'Como se declara uma função em JavaScript?',
     opcoes: ['function{}', 'var()', 'set[]', 'fuction()'],
     respostaCorreta: 'd',
-    imagem: 'assets/FASE 3.png'
+    imagem: 'assets/fase3.gif'
   }
 ];
 
@@ -89,26 +89,26 @@ function verificarResposta(evento) {
     } else {
       elementoResultado.textContent = `Parabéns! Você completou todas as fases do quiz e ajudou Joshua a escapar do mundo virtual!.`;
       const imagemFinal = new Image();
-      imagemFinal.src = 'assets/Fundo.gif';
+      imagemFinal.src = 'assets/vitoria.gif';
       imagemFinal.className = 'imagem-final';
       elementoResultado.appendChild(imagemFinal);
       elementoPergunta.style.display = 'none';
       quizAtivo = true;
       setTimeout(() => {
         voltarParaTelaInicial();
-      }, 5000);
+      }, 18000);
     }
   } else {
     elementoResultado.innerHTML = 'Você perdeu! Tente novamente, não deixe Joshua agora!';
     const imagemGameOver = new Image();
-    imagemGameOver.src = 'assets/Fundo.gif';
+    imagemGameOver.src = 'assets/morte.gif';
     imagemGameOver.className = 'imagem-game-over';
     elementoResultado.appendChild(imagemGameOver);
     elementoPergunta.style.display = 'none';
     mostrandoTelaDeDerrota = true;
     setTimeout(() => {
       voltarParaTelaInicial();
-    }, 5000);
+    }, 11000);
   }
 }
 
