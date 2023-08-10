@@ -125,7 +125,7 @@ function voltarParaTelaInicial() {
     quizAtivo = false
   }
   faseAtual = 0;
-  elementoHistoria.style.display = 'flex';
+  elementoPergunta.style.display = 'flex';
   elementoPergunta.style.display = 'none';
   quizAtivo = false;
 }

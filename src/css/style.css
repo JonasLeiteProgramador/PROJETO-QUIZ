@@ -23,6 +23,7 @@ body {
     font-size: 25px;
     line-height: 30px;
     letter-spacing: 4px;
+    margin-top: -50px;
   }
   
   .quiz-container {
@@ -129,6 +130,7 @@ body {
     width: 600px; /* ajuste o tamanho conforme necessário */
     height: 400px;
     margin-bottom: 20px;
+    margin-top: -100px;
   }
   
   .quiz-container.quiz-iniciado .logo {
