@@ -25,6 +25,8 @@ let mostrandoTelaDeDerrota = false;
 const elementoResultado = document.getElementById('resultado');
 const elementoPergunta = document.getElementById('container-pergunta');
 const elementoHistoria = document.querySelector('.historia');
+const elementoContainerQuiz = document.querySelector('.quiz-container');
+const elementoLogo = document.querySelector('.logo');
 
 function iniciarQuiz() {
   elementoHistoria.style.display = 'none';
@@ -32,6 +34,8 @@ function iniciarQuiz() {
   elementoResultado.innerHTML = '';
   mostrandoTelaDeDerrota = false;
   quizAtivo = true;
+  elementoContainerQuiz.classList.add('quiz-iniciado');
+  elementoLogo.classList.remove('no-quiz');
   mostrarFase();
 }
 

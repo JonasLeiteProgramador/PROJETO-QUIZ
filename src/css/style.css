@@ -14,8 +14,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Courier New', Courier, monospace;
+}
 
-  }
 
   .titulo{
     
@@ -121,4 +121,16 @@ body {
     width: 500px;
     height: 500px;
     margin-left: 20px;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    width: 600px; /* ajuste o tamanho conforme necessário */
+    height: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .quiz-container.quiz-iniciado .logo {
+    display: none;
   }
